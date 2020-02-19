@@ -10,5 +10,5 @@ A test case (testCase1) is written in TaurusLoadJunitApplicationTests.java to hi
 https://od-pky2m545rcancom.od22.appdirectondemand.com/api/v3/subscription/developer/developerId/externalAccountId with OAuth 1.0 protocol.
 Blazemeter Taurus YAML script blazemeter_junit.yaml is linked to the java file. YAML script has iteration and concurrency parameters specified, accordingly the test case is executed and load is generated.
 
-#Output
+# Output
 Upon running the command bzt YAMLscriptPath.yaml, the YAML script is executed and the resulting summary stats are generated in the console log.
