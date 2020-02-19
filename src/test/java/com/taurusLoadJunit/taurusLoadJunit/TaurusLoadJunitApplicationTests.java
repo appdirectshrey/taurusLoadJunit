@@ -41,24 +41,23 @@ public class TaurusLoadJunitApplicationTests {
 		Retrofit retrofit = builder.build();
 
 		SubscriptionService service = retrofit.create(SubscriptionService.class);
-		Call<List<Subscription>> callSync = service.getSubscriptions();
+//		Call<List<Subscription>> callSync = service.getSubscriptions();
+		Call<Subscription> callSync = service.getSubscription();
 
 		System.out.println("callSync:" +callSync);
 
-		List<Subscription> subscriptionList = new ArrayList<>();
+//		List<Subscription> subscriptionList = new ArrayList<>();
+		Subscription subscription = new Subscription();
 
 		try {
-			Response<List<Subscription>> response = callSync.execute();
-			subscriptionList = response.body();
+//			Response<List<Subscription>> response = callSync.execute();
+			Response<Subscription> response = callSync.execute();
+			subscription = response.body();
+			System.out.println("Subscription: "+subscription);
 		} catch (Exception ex) {
 			System.out.println("Exception: "+ex);
 		}
 
-		if(subscriptionList.size()!=0) {
-			for (Subscription subscription : subscriptionList) {
-				System.out.println("Subscription: " + subscription);
-			}
-		}
 	}
 
 

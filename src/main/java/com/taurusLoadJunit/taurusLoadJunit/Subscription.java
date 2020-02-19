@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class Subscription implements Serializable {
 
     private String subscriptionId;
-    private String vendorId;
-    private String externalAccountId;
+    private String developerId;
+    private String developerAccountId;
     private String partner;
 
     public String getSubscriptionId() {
@@ -17,20 +17,20 @@ public class Subscription implements Serializable {
         this.subscriptionId = subscriptionId;
     }
 
-    public String getVendorId() {
-        return vendorId;
+    public String getDeveloperId() {
+        return developerId;
     }
 
-    public void setVendorId(String vendorId) {
-        this.vendorId = vendorId;
+    public void setDeveloperId(String developerId) {
+        this.developerId = developerId;
     }
 
-    public String getExternalAccountId() {
-        return externalAccountId;
+    public String getDeveloperAccountId() {
+        return developerAccountId;
     }
 
-    public void setExternalAccountId(String externalAccountId) {
-        this.externalAccountId = externalAccountId;
+    public void setDeveloperAccountId(String developerAccountId) {
+        this.developerAccountId = developerAccountId;
     }
 
     public String getPartner() {
@@ -39,5 +39,15 @@ public class Subscription implements Serializable {
 
     public void setPartner(String partner) {
         this.partner = partner;
+    }
+
+    @Override
+    public String toString() {
+        return "Subscription{" +
+                "subscriptionId='" + subscriptionId + '\'' +
+                ", developerId='" + developerId + '\'' +
+                ", developerAccountId='" + developerAccountId + '\'' +
+                ", partner='" + partner + '\'' +
+                '}';
     }
 }
